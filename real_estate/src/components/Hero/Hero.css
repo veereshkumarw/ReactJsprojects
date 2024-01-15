@@ -1,0 +1,138 @@
+.hero-wrapper{
+    color: white;
+    position: relative;
+    padding-bottom: 2rem ;
+    z-index: 1;
+    /* background-color: var(--black); */
+
+    /* this is removed for making black-white gradient
+     */
+
+      /* ------it is again done in app.css------ */
+}
+
+.hero-container{
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+/* --------------left side----------- */
+
+.hero-left{
+    gap: 3rem;
+    /* in order to have gap btw diff ele
+    of this hero-left container. for this, one
+    below the other */
+}
+
+.hero-title{
+    position: relative;
+    z-index: 1;
+    /* since we also have one circle 
+    at top right under the title */
+}
+
+.orange-circle{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 999px;
+    background: var(--orange-gradient);
+    position: absolute;
+    z-index: -1;
+    right: 32%;
+    top: -8%;
+}
+
+.hero-title h1{
+    font-weight: 400;
+    font-size: 3.8rem;
+    line-height: 4rem;
+    
+}
+
+.search-bar{
+    background-color: white;
+    border-radius: 5px;
+    border: 3px solid rgba(120, 120, 120, 0.374);
+    padding: 0.5rem 1rem;
+    justify-content: space-between;
+}
+
+.search-bar>input{
+    border: none;
+    outline: none;
+}
+
+.stats{
+    width: 100%;
+    justify-content: space-between;
+}
+
+/* nth child--here span are child of stat lass
+so 1st child-<countup> */
+/* '>' applies to all children of stat children */
+
+.stat>:nth-child(1){
+    font-size: 2rem;
+}
+
+.stat>:nth-child(1)>:last-child{
+    color: orangered;
+}
+
+/* ----------------right side----------------- */
+
+.image-container{
+    width: 30rem;
+    height: 35rem;
+    overflow: hidden;
+    /* since we need a semicircular shape in top of image */
+    border-radius: 15rem 15rem 0 0;
+    border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+.image-container>img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------responsive=-------------------------- */
+
+@media (max-width:640px) {
+
+    /* we need to have some space in thr top btw logo
+     n heading, therefore targeting hero-cont */
+     
+    .hero-container{
+        margin-top: 2rem;
+    }
+    
+    .hero-title h1{
+        /* reducing the size of char */
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .image-container{
+        width: 95%;
+        height: 25rem;
+    }
+
+    .stats{
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .hero-right{
+        width:100%;
+    }
+
+    /* the number part in stats */
+    .stat>:nth-child(1){
+         font-size: 1.5rem;
+    }
+
+    .stat>:nth-child(2){
+        font-size: 0.8rem;
+    }
+}

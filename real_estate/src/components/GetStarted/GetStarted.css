@@ -1,0 +1,22 @@
+.g-container{
+    background-color:  #e5d393;
+    border-radius: 120px;
+}
+
+.inner-container{
+    background: blanchedalmond;
+    gap: 2rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 8px solid #a6a72b;
+    text-align: center;
+
+}
+
+.inner-container .button{
+    
+    color: #084072;
+    background: #f2d878;
+    border: 5px solid #aab24c;
+    border-radius: 15px;
+}
