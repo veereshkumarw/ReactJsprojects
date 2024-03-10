@@ -1,0 +1,60 @@
+.h-wrapper {
+    /* background: var(--black); */
+    color: aliceblue;
+
+    /* bg-color is removed for making black-white gradient
+     */
+    /* ------it is again done in app.css------ */
+}
+
+/* we need to have space btw logo.png and menu items .
+since logo n h-menu are in same div i.e., h-container */
+.h-container {
+    justify-content: space-between;
+    /* instead we can use s-between to have more 
+    space in between */
+    color: var(--secondary);
+    padding: 1rem 0 1rem 0;
+}
+
+.h-menu {
+    gap: 2rem;
+}
+
+/* div>p means Selects all <p> elements where the parent is a <div> element  */
+.h-menu>*:hover {
+    cursor: pointer;
+}
+
+/* -------------------for responsive for icon------------ */
+.menu-icon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .h-menu {
+        z-index: 99;
+        /* z-index bcoz the menu list was overlapping
+        hero title so now we are displaying menu list
+        above the hero title */
+        position: absolute;
+        top: 3rem;
+        right: 4rem;
+        color: var(--black);
+        background-color: white;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem;
+        font-weight: 500;
+        border-radius: 10px;
+        align-items: flex-start;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+        transition: all 300ms ease-in;
+    }
+
+
+}
